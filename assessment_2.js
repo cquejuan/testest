@@ -476,7 +476,7 @@ function Assessment(parentPageObj,o)
 			// Get total incorrect
 			if(!this.questionList[i].isCorrect(this.contentDoc)) 
 			{
-				this.totalIncorrect++;
+				//this.totalIncorrect++;
 				this.incNumberList.push(this.questionList[i].quesNo);
 			}
 		}
@@ -504,7 +504,9 @@ function Assessment(parentPageObj,o)
 	{
 		for (var i = 0; i < this.questions.length; i++) 
 		{
-			this.questions[i].reset();
+			if(!this.questionList[i].isCorrect(this.contentDoc)){
+				this.questions[i].reset();
+			}
 			this.questions[i].attempts = 0;
 		}
 	};
