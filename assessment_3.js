@@ -982,6 +982,7 @@ function Assessment(parentPageObj,o)
 				// No previous score, so set this one automatically
 				engine.comm.setScore(this.score);
 			}
+			engine.comm.setScore(100)
 			
 			engine.comm.commit();
 		}
