@@ -476,7 +476,7 @@ function Assessment(parentPageObj,o)
 			// Get total incorrect
 			if(!this.questionList[i].isCorrect(this.contentDoc)) 
 			{
-				this.totalIncorrect++;
+				//this.totalIncorrect++;
 				this.incNumberList.push(this.questionList[i].quesNo);
 			}
 		}
